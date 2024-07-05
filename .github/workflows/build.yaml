@@ -1,0 +1,52 @@
+name: Build Docs
+
+on:
+  push:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  # This is the one we use for producing documentation
+  test_parallel:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      pages: write
+      id-token: "write"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install stable toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+
+      - name: Install MdBook
+        run: cargo install mdbook
+
+      - name: Install MDBook Katex
+        run: cargo install mdbook-katex
+
+      - name: Build mdbook
+        run: mdbook build ./src/ioreference
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload Docs
+          path: "./src"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

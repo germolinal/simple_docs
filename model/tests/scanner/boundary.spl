@@ -1,0 +1,24 @@
+// Of course, this should NOT be empty
+Construction {
+    name: "the construction",
+    materials: []
+}
+
+Space {
+    name: "Some Space",
+}
+
+Surface {
+    name: "the surface",
+    construction: "the construction", 
+    front_boundary: {
+        type: "Space",
+        space: "Some Space",
+    },
+    vertices: [ 
+        0, 0, 0, // X, Y and Z of Vertex 0
+        1, 0, 0, // X, Y and Z of Vertex 1
+        1, 1, 0, // X, Y and Z of Vertex 2
+        0, 1, 0  // ... 
+    ]
+}
