@@ -12,7 +12,7 @@ env:
 
 jobs:
   # This is the one we use for producing documentation
-  test_parallel:
+  build_docs:
     runs-on: ubuntu-latest
     permissions:
       contents: "read"
