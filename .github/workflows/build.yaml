@@ -35,6 +35,17 @@ jobs:
       - name: Install MDBook Katex
         run: cargo install mdbook-katex
 
+      - name: Compile Book
+        run: |
+          mkdir tmp
+          cp -rf auto_src/ioreference tmp
+          cp -rf auto_src/validation tmp
+          cp -rf auto_src/model tmp
+          cp -rf auto_src/validation tmp
+          cat src/SUMMARY_TEMPLATE.md > tmp_summary.md
+          cat tmp/ioreference/src/SUMMARY.md >> tmp_summary.md
+          cat tmp_summary.md > tmp/ioreference/src/SUMMARY.md
+
       - name: Build mdbook
         run: mdbook build ./src/ioreference
 
