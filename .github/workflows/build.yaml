@@ -38,16 +38,16 @@ jobs:
       - name: Compile Book
         run: |
           mkdir tmp
-          cp -rf auto_src/ioreference tmp
-          cp -rf auto_src/validation tmp
-          cp -rf auto_src/model tmp
-          cp -rf auto_src/validation tmp
+          cp -R auto_src/. tmp/.
           cat src/SUMMARY_TEMPLATE.md > tmp_summary.md
-          cat tmp/ioreference/src/SUMMARY.md >> tmp_summary.md
-          cat tmp_summary.md > tmp/ioreference/src/SUMMARY.md
+          cat tmp/docs/ioreference/src/SUMMARY.md >> tmp_summary.md
+          cp -R src/. tmp/docs/ioreference/src/.
+          cat tmp_summary.md > tmp/docs/ioreference/src/SUMMARY.md
 
       - name: Build mdbook
-        run: mdbook build ./src/ioreference
+        run: |
+          cd tmp/docs/ioreference
+          mdbook build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -56,7 +56,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload Docs
-          path: "./src"
+          path: "tmp/docs/ioreference/book"
 
       - name: Deploy to GitHub Pages
         id: deployment
