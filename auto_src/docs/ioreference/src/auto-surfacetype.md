@@ -1,27 +1,27 @@
 # SurfaceType
 
- The kind of surface, useful for pre- and post-processing."
-"
- This information does not affect the simulation outcome."
- For example, `SIMPLE` will decide whether a wall is interior"
- or exterior based on the boundaries, and will not check these"
- labels. However, these labels can be useful for creating"
- measures (e.g., insulate all the exterior walls)"
-"
- # Example"
-"
- #### `.json`"
- ```json"
- {{#include ../../../model/tests/scanner/surface_type.json}}"
- ```"
-"
+The kind of surface, useful for pre- and post-processing.
+
+This information does not affect the simulation outcome.
+For example, `SIMPLE` will decide whether a wall is interior
+or exterior based on the boundaries, and will not check these
+labels. However, these labels can be useful for creating
+measures (e.g., insulate all the exterior walls)
+
+# Example
+
+#### `.json`
+```json
+{{#include ../../../model/tests/scanner/surface_type.json}}
+```
+
 
 
  ## Supported Variants
 
 ###  ExteriorWall
 
- A Wall that connects a space with the exterior.    "
+A Wall that connects a space with the exterior.    
 
 
 
@@ -32,7 +32,7 @@
 
 ###  InteriorWall
 
- A Wall connecting two spaces"
+A Wall connecting two spaces
 
 
 
@@ -43,7 +43,7 @@
 
 ###  GroundFloor
 
- A useful horizontal surface that touches the ground"
+A useful horizontal surface that touches the ground
 
 
 
@@ -54,8 +54,8 @@
 
 ###  ExteriorFloor
 
- A floor that leads to the exterior (e.g., a floor"
- suspended by columns)"
+A floor that leads to the exterior (e.g., a floor
+suspended by columns)
 
 
 
@@ -66,10 +66,10 @@
 
 ###  InteriorFloor
 
- Floor/ceiling that connects two spaces, and whose area is part of the  "
- building or project being modelled. For instance, the top ceiling of an"
- apartment is often, strictly speaking, an interior floor... but it is"
- not part of the sellable area of the apartment itself"
+Floor/ceiling that connects two spaces, and whose area is part of the  
+building or project being modelled. For instance, the top ceiling of an
+apartment is often, strictly speaking, an interior floor... but it is
+not part of the sellable area of the apartment itself
 
 
 
@@ -80,8 +80,8 @@
 
 ###  Ceiling
 
- A floor/ceiling that connect two spaces, but whose area is not part"
- of the area of the project/building (see the `InteriorFloor` variant)."
+A floor/ceiling that connect two spaces, but whose area is not part
+of the area of the project/building (see the `InteriorFloor` variant).
 
 
 
@@ -92,7 +92,7 @@
 
 ###  Roof
 
- A surfaces at the top of a building"
+A surfaces at the top of a building
 
 
 
@@ -103,7 +103,7 @@
 
 ###  Other
 
- Other kind of surface"
+Other kind of surface
 
 
 

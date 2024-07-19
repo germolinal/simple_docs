@@ -1,13 +1,13 @@
 # TableType
 
- Type of a table"
+Type of a table
 
 
  ## Supported Variants
 
 ###  Other
 
- Other kind of table"
+Other kind of table
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Dining
 
- Dining table"
+Dining table
 
 
 
@@ -29,7 +29,7 @@
 
 ###  Coffee
 
- Cofee table"
+Cofee table
 
 
 

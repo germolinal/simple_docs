@@ -1,22 +1,22 @@
 # Output
 
-Possible outputs to request from the simulation"
-"
-## Example"
-"
-```json"
-{{#include ../../../model/tests/box.spl:bedroom}}"
-{{#include ../../../model/tests/box.spl:bedroom_output}}"
-```"
-"
+ossible outputs to request from the simulation
+
+# Example
+
+``json
+{#include ../../../model/tests/box.spl:bedroom}}
+{#include ../../../model/tests/box.spl:bedroom_output}}
+``
+
 
 
  ## Supported Variants
 
 ###  Clothing
 
-The amount of clothing the person is using,\""
-in Clo value\""
+he amount of clothing the person is using,
+n Clo value
 
 
 
@@ -28,8 +28,8 @@ Output {
 
 ###  FenestrationOpenFraction
 
-Represents how open is a fenestration.\""
-Contains the Index of fenestration, and its open fraction\""
+epresents how open is a fenestration.
+ontains the Index of fenestration, and its open fraction
 
 
 
@@ -41,11 +41,11 @@ Output {
 
 ###  HeatingCoolingPowerConsumption
 
-Represents the heating/cooling energy consumption of a Heating/Cooling system,\""
-in Watts\""
-\""
-Contains the index of the HVAC in the building\\'s vector,\""
-and the power.        \""
+epresents the heating/cooling energy consumption of a Heating/Cooling system,
+n Watts
+
+ontains the index of the HVAC in the building\\'s vector,
+nd the power.
 
 
 
@@ -57,8 +57,8 @@ Output {
 
 ###  LuminairePowerConsumption
 
-Represents the power being consumed by\""
-a Luminaire object, in Watts (luminaire index, power)\""
+epresents the power being consumed by
+ Luminaire object, in Watts (luminaire index, power)
 
 
 
@@ -70,8 +70,8 @@ Output {
 
 ###  SurfaceFrontConvectionCoefficient
 
-The convective heat transfer coefficient\""
-at the front of a surface\""
+he convective heat transfer coefficient
+t the front of a surface
 
 
 
@@ -83,8 +83,8 @@ Output {
 
 ###  SurfaceBackConvectionCoefficient
 
-The convective heat transfer coefficient\""
-at the back of a surface\""
+he convective heat transfer coefficient
+t the back of a surface
 
 
 
@@ -96,8 +96,8 @@ Output {
 
 ###  SurfaceFrontConvectiveHeatFlow
 
-The convective heat flow\""
-at the front of a surface\""
+he convective heat flow
+t the front of a surface
 
 
 
@@ -109,8 +109,8 @@ Output {
 
 ###  SurfaceBackConvectiveHeatFlow
 
-The convective heat flow\""
-at the back of a surface\""
+he convective heat flow
+t the back of a surface
 
 
 
@@ -122,7 +122,7 @@ Output {
 
 ###  SurfaceFrontSolarIrradiance
 
-Incident solar irradiance at the front\""
+ncident solar irradiance at the front
 
 
 
@@ -134,7 +134,7 @@ Output {
 
 ###  SurfaceBackSolarIrradiance
 
-Incident solar irradiance at the back\""
+ncident solar irradiance at the back
 
 
 
@@ -146,7 +146,7 @@ Output {
 
 ###  SurfaceFrontIRIrradiance
 
-Incident Infrared irradiance at the front\""
+ncident Infrared irradiance at the front
 
 
 
@@ -158,7 +158,7 @@ Output {
 
 ###  SurfaceBackIRIrradiance
 
-Incident Infrared irradiance at the back\""
+ncident Infrared irradiance at the back
 
 
 
@@ -170,8 +170,8 @@ Output {
 
 ###  FenestrationFrontConvectionCoefficient
 
-The convective heat transfer coefficient\""
-at the front of a surface\""
+he convective heat transfer coefficient
+t the front of a surface
 
 
 
@@ -183,8 +183,8 @@ Output {
 
 ###  FenestrationBackConvectionCoefficient
 
-The convective heat transfer coefficient\""
-at the back of a surface\""
+he convective heat transfer coefficient
+t the back of a surface
 
 
 
@@ -196,8 +196,8 @@ Output {
 
 ###  FenestrationFrontConvectiveHeatFlow
 
-The convective heat flow\""
-at the front of a surface\""
+he convective heat flow
+t the front of a surface
 
 
 
@@ -209,8 +209,8 @@ Output {
 
 ###  FenestrationBackConvectiveHeatFlow
 
-The convective heat flow\""
-at the back of a surface\""
+he convective heat flow
+t the back of a surface
 
 
 
@@ -222,7 +222,7 @@ Output {
 
 ###  FenestrationFrontSolarIrradiance
 
-Incident solar irradiance at the front\""
+ncident solar irradiance at the front
 
 
 
@@ -234,7 +234,7 @@ Output {
 
 ###  FenestrationBackSolarIrradiance
 
-Incident solar irradiance at the back\""
+ncident solar irradiance at the back
 
 
 
@@ -246,7 +246,7 @@ Output {
 
 ###  FenestrationFrontIRIrradiance
 
-Incident Infrared irradiance at the front\""
+ncident Infrared irradiance at the front
 
 
 
@@ -258,7 +258,7 @@ Output {
 
 ###  FenestrationBackIRIrradiance
 
-Incident Infrared irradiance at the back\""
+ncident Infrared irradiance at the back
 
 
 
@@ -270,9 +270,9 @@ Output {
 
 ###  SpaceDryBulbTemperature
 
-Space Air Temperature in C... The elements\""
-are the index of the Space in the Building mode\""
-and the temperature\""
+pace Air Temperature in C... The elements
+re the index of the Space in the Building mode
+nd the temperature
 
 
 
@@ -284,8 +284,8 @@ Output {
 
 ###  SpaceInfiltrationVolume
 
-The volume of air that is entering the space in\""
-an uncontrolled way. In m3/s\""
+he volume of air that is entering the space in
+n uncontrolled way. In m3/s
 
 
 
@@ -297,8 +297,8 @@ Output {
 
 ###  SpaceInfiltrationTemperature
 
-The temperature of air that is entering the space in\""
-an uncontrolled way. In C\""
+he temperature of air that is entering the space in
+n uncontrolled way. In C
 
 
 
@@ -310,8 +310,8 @@ Output {
 
 ###  SpaceVentilationVolume
 
-The volume of air that is entering the space in\""
-a controlled way. In m3/s\""
+he volume of air that is entering the space in
+ controlled way. In m3/s
 
 
 
@@ -323,8 +323,8 @@ Output {
 
 ###  SpaceVentilationTemperature
 
-The temperature of air that is entering the space in\""
-a controlled way. In C\""
+he temperature of air that is entering the space in
+ controlled way. In C
 
 
 
@@ -336,8 +336,8 @@ Output {
 
 ###  SpaceAirExchangeVolume
 
-The volume of air that is moving from one space to another in\""
-a controlled way. In m3/s\""
+he volume of air that is moving from one space to another in
+ controlled way. In m3/s
 
 
 
@@ -349,8 +349,8 @@ Output {
 
 ###  SurfaceNodeTemperature
 
-Temperature (Float) of Surface\\'s (usize) node (usize)\""
-I.e. the order is (Surface Index, Node index, Temperature).    \""
+emperature (Float) of Surface\\'s (usize) node (usize)
+.e. the order is (Surface Index, Node index, Temperature).
 
 
 
@@ -362,8 +362,8 @@ Output {
 
 ###  FenestrationNodeTemperature
 
-Temperature (Float) of Fenestration\\'s (usize) node (usize)\""
-I.e. the order is (Surface Index, Node index, Temperature).    \""
+emperature (Float) of Fenestration\\'s (usize) node (usize)
+.e. the order is (Surface Index, Node index, Temperature).
 
 
 

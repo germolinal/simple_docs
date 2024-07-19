@@ -1,13 +1,13 @@
 # TableShape
 
- Shape of a table"
+Shape of a table
 
 
  ## Supported Variants
 
 ###  Other
 
- Other kind of table"
+Other kind of table
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Rectangular
 
- Rectangular"
+Rectangular
 
 
 
@@ -29,7 +29,7 @@
 
 ###  Circular
 
- Circular"
+Circular
 
 
 
@@ -40,7 +40,7 @@
 
 ###  LShaped
 
- L-Shaped"
+L-Shaped
 
 
 

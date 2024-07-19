@@ -1,6 +1,6 @@
 # Object
 
- An object"
+An object
 
 
  ## Full Specification
@@ -21,49 +21,49 @@ Object {
 
 #### name
 
- The name of the object"
+The name of the object
 
 
 
 
 #### dimensions
 
- The size of the object (x, y, z)"
+The size of the object (x, y, z)
 
 
 
 
 #### location
 
- The location of the center of the objeect"
+The location of the center of the object
 
 
 
 
 #### up
 
- The up"
+The up
 
 
 
 
 #### front
 
- Front"
+Front
 
 
 
 
 #### specifications
 
- The specification of the object"
+The specification of the object
 
 
 
 
 #### space (*optional*)
 
- The space in which the object is located"
+The space in which the object is located
 
 
 

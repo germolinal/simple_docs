@@ -1,13 +1,13 @@
 # SpacePurpose
 
- The category of a space."
+The category of a space.
 
 
  ## Supported Variants
 
 ###  Bathroom
 
- Bathroom, toilette, shower, etc."
+Bathroom, toilette, shower, etc.
 
 
 
@@ -21,7 +21,7 @@
 
 ###  Bedroom
 
- Bedroom"
+Bedroom
 
 
 
@@ -35,7 +35,7 @@
 
 ###  DiningRoom
 
- Dining room"
+Dining room
 
 
 
@@ -49,7 +49,7 @@
 
 ###  Kitchen
 
- Kitchen"
+Kitchen
 
 
 
@@ -63,7 +63,7 @@
 
 ###  LivingRoom
 
- Living room"
+Living room
 
 
 
@@ -77,7 +77,7 @@
 
 ###  Office
 
- Office"
+Office
 
 
 
@@ -91,7 +91,7 @@
 
 ###  Storage
 
- Storage"
+Storage
 
 
 
@@ -105,7 +105,7 @@
 
 ###  Garage
 
- Garage"
+Garage
 
 
 
@@ -119,7 +119,7 @@
 
 ###  Hallway
 
- Hallway"
+Hallway
 
 
 
@@ -133,7 +133,7 @@
 
 ###  Laundry
 
- Laundry"
+Laundry
 
 
 
@@ -147,7 +147,7 @@
 
 ###  Other
 
- Other"
+Other
 
 
 

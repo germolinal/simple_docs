@@ -1,13 +1,13 @@
 # ChairArmType
 
- Types of armchair"
+Types of armchair
 
 
  ## Supported Variants
 
 ###  Existing
 
- Has arms"
+Has arms
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Missing
 
- Does not have arms"
+Does not have arms
 
 
 

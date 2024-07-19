@@ -1,20 +1,20 @@
 # Space
 
- Represents a space with homogeneous temperature within a building. It is often actual room enclosed by walls, but it can also"
- be more than one room. In this latter case, there will be walls"
- within the Space, meaning that there are walls whose Front and Back"
- boundary is this space."
-"
- ## Examples"
-"
- #### `.spl`"
- ```rs"
- {{#include ../../../model/tests/scanner/space.spl}}"
- ```"
- #### `.json`"
- ```rs"
- {{#include ../../../model/tests/scanner/space.json}}"
- ```"
+Represents a space with homogeneous temperature within a building. It is often actual room enclosed by walls, but it can also
+be more than one room. In this latter case, there will be walls
+within the Space, meaning that there are walls whose Front and Back
+boundary is this space.
+
+## Examples
+
+#### `.spl`
+```rs
+{{#include ../../../model/tests/scanner/space.spl}}
+```
+#### `.json`
+```rs
+{{#include ../../../model/tests/scanner/space.json}}
+```
 
 
  ## Full Specification
@@ -34,44 +34,44 @@ Space {
 
 #### name
 
- The name of the space"
+The name of the space
 
 
 
 
 #### volume (*optional*)
 
- Volume of the space"
+Volume of the space
 
 
 
 
 #### infiltration (*optional*)
 
- The infiltration in the space"
+The infiltration in the space
 
 
 
 
 #### building (*optional*)
 
- The building in which this `Space` is inserted"
+The building in which this `Space` is inserted
 
 
 
 
 #### storey (*optional*)
 
- The storey in which the space is located,"
- indexing from 0 (i.e., ground floor is 0)"
+The storey in which the space is located,
+indexing from 0 (i.e., ground floor is 0)
 
 
 
 
 #### purposes
 
- The purposes in a room. It can have multiple"
- purposes (e.g., a Living/Dining/Kithen space)"
+The purposes in a room. It can have multiple
+purposes (e.g., a Living/Dining/Kithen space)
 
 
 

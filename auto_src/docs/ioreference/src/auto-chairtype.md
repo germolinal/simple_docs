@@ -1,13 +1,13 @@
 # ChairType
 
- Type of chair"
+Type of chair
 
 
  ## Supported Variants
 
 ###  Other
 
- Other"
+Other
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Dining
 
- Dining"
+Dining
 
 
 
@@ -29,7 +29,7 @@
 
 ###  Office
 
- Office"
+Office
 
 
 
@@ -40,7 +40,7 @@
 
 ###  Stool
 
- Stool"
+Stool
 
 
 

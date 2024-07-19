@@ -1,13 +1,13 @@
 # ChairLegType
 
- Types of legs in a chair"
+Types of legs in a chair
 
 
  ## Supported Variants
 
 ###  Four
 
- Four legs    "
+Four legs    
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Three
 
- Three legs"
+Three legs
 
 
 
@@ -29,7 +29,7 @@
 
 ###  Star
 
- Star"
+Star
 
 
 
@@ -40,7 +40,7 @@
 
 ###  Other
 
- Other"
+Other
 
 
 

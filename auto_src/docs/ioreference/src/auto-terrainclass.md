@@ -1,13 +1,13 @@
 # TerrainClass
 
- This class modifies the wind speed in the site"
+This class modifies the wind speed in the site
 
 
  ## Supported Variants
 
 ###  Country
 
- Describes a Flat, Open Country"
+Describes a Flat, Open Country
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Suburbs
 
- Describes a Rough, Wooded Country or Suburb"
+Describes a Rough, Wooded Country or Suburb
 
 
 
@@ -29,7 +29,7 @@
 
 ###  City
 
- Describes Towns, City Outskirts, and centers of large cities"
+Describes Towns, City Outskirts, and centers of large cities
 
 
 
@@ -40,7 +40,7 @@
 
 ###  Ocean
 
- Describes sites next to the Ocean or Bayou Flat"
+Describes sites next to the Ocean or Bayou Flat
 
 
 
@@ -51,7 +51,7 @@
 
 ###  Urban
 
- Describes Urban, Industrual or Forest terrain"
+Describes Urban, Industrual or Forest terrain
 
 
 

@@ -1,25 +1,25 @@
 # GasSpecification
 
- Represent a common gas, with known physical properties"
-"
-"
- ## Examples"
-"
- #### `.json`"
- ```json"
- {{#include ../../../model/tests/scanner/gas_specification.json}}"
- ```"
-"
- > **Note**: This object cannot be declared by itself in a `SIMPLE` model,"
- as it is always embeded on a `Substance` of type `Gas`"
-"
+Represent a common gas, with known physical properties
+
+
+## Examples
+
+#### `.json`
+```json
+{{#include ../../../model/tests/scanner/gas_specification.json}}
+```
+
+> **Note**: This object cannot be declared by itself in a `SIMPLE` model,
+as it is always embeded on a `Substance` of type `Gas`
+
 
 
  ## Supported Variants
 
 ###  Air
 
- Air"
+Air
 
 
 
@@ -30,7 +30,7 @@
 
 ###  Argon
 
- Argon"
+Argon
 
 
 
@@ -41,7 +41,7 @@
 
 ###  Krypton
 
- Krypton"
+Krypton
 
 
 
@@ -52,7 +52,7 @@
 
 ###  Xenon
 
- Xenon"
+Xenon
 
 
 
