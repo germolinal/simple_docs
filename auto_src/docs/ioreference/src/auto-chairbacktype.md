@@ -1,13 +1,13 @@
 # ChairBackType
 
- Types of chair back"
+Types of chair back
 
 
  ## Supported Variants
 
 ###  Existing
 
- Has arms"
+Has arms
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Missing
 
- Does not have arms    "
+Does not have arms    
 
 
 

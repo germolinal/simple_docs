@@ -1,13 +1,13 @@
 # StorageType
 
- Types of storage"
+Types of storage
 
 
  ## Supported Variants
 
 ###  Cabinet
 
- Enclosed storage"
+Enclosed storage
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Shelf
 
- Open storage (i.e., shelves)"
+Open storage (i.e., shelves)
 
 
 

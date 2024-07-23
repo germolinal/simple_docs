@@ -1,13 +1,13 @@
 # ObjectSpecs
 
- An object category"
+An object category
 
 
  ## Supported Variants
 
 ###  Other
 
- Other category"
+Other category
 
 
 
@@ -21,7 +21,7 @@
 
 ###  Bathtub
 
- Bathtub"
+Bathtub
 
 
 
@@ -35,7 +35,7 @@
 
 ###  Bed
 
- Bed"
+Bed
 
 
 
@@ -49,7 +49,7 @@
 
 ###  Chair
 
- Chair"
+Chair
 
 
 
@@ -66,7 +66,7 @@ ObjectSpecs {
 
 ###  Dishwasher
 
- Dishwasher"
+Dishwasher
 
 
 
@@ -80,7 +80,7 @@ ObjectSpecs {
 
 ###  Fireplace
 
- Fireplace"
+Fireplace
 
 
 
@@ -94,7 +94,7 @@ ObjectSpecs {
 
 ###  Oven
 
- Oven"
+Oven
 
 
 
@@ -108,7 +108,7 @@ ObjectSpecs {
 
 ###  Refrigerator
 
- Refrigerator"
+Refrigerator
 
 
 
@@ -122,7 +122,7 @@ ObjectSpecs {
 
 ###  Sink
 
- Sink"
+Sink
 
 
 
@@ -136,7 +136,7 @@ ObjectSpecs {
 
 ###  Sofa
 
- Sofa"
+Sofa
 
 
 
@@ -150,7 +150,7 @@ ObjectSpecs {
 
 ###  Stairs
 
- Stairs"
+Stairs
 
 
 
@@ -164,7 +164,7 @@ ObjectSpecs {
 
 ###  Storage
 
- Storage"
+Storage
 
 
 
@@ -178,7 +178,7 @@ ObjectSpecs {
 
 ###  Stove
 
- Stove"
+Stove
 
 
 
@@ -192,7 +192,7 @@ ObjectSpecs {
 
 ###  Table
 
- Table"
+Table
 
 
 
@@ -207,7 +207,7 @@ ObjectSpecs {
 
 ###  Television
 
- Television"
+Television
 
 
 
@@ -221,7 +221,7 @@ ObjectSpecs {
 
 ###  Toilet
 
- Toilet"
+Toilet
 
 
 
@@ -235,7 +235,7 @@ ObjectSpecs {
 
 ###  WasherDryer
 
- Washer Dryer"
+Washer Dryer
 
 
 

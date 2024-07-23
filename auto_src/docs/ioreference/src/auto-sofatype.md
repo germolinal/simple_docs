@@ -1,13 +1,13 @@
 # SofaType
 
- Types of armchair"
+Types of armchair
 
 
  ## Supported Variants
 
 ###  Other
 
- Other"
+Other
 
 
 
@@ -18,7 +18,7 @@
 
 ###  Rectangular
 
- Rectangular"
+Rectangular
 
 
 
@@ -29,7 +29,7 @@
 
 ###  SingleSeat
 
- Single Seat"
+Single Seat
 
 
 
@@ -40,7 +40,7 @@
 
 ###  LShaped
 
- L-Shaped"
+L-Shaped
 
 
 
@@ -51,7 +51,7 @@
 
 ###  LShapedExtension
 
- L-Shaped Extension"
+L-Shaped Extension
 
 
 

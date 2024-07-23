@@ -1,23 +1,23 @@
 # ShelterClass
 
- Indicates how sheltered is the building. This affects its infiltration"
-  "
- ## Examples"
-"
- #### `.json`"
-"
- ```json"
- {{#include ../../../model/tests/scanner/shelter_class.json}}"
- ```"
- > **Note**: This object cannot be declared by itself in a `SIMPLE` model,"
- as it is always embeded on a `Building` object"
+Indicates how sheltered is the building. This affects its infiltration
+ 
+## Examples
+
+#### `.json`
+
+```json
+{{#include ../../../model/tests/scanner/shelter_class.json}}
+```
+> **Note**: This object cannot be declared by itself in a `SIMPLE` model,
+as it is always embeded on a `Building` object
 
 
  ## Supported Variants
 
 ###  NoObstructions
 
- No obstructions or local shielding"
+No obstructions or local shielding
 
 
 
@@ -28,7 +28,7 @@
 
 ###  IsolatedRural
 
- Typical shelter for an isolated rural house"
+Typical shelter for an isolated rural house
 
 
 
@@ -39,7 +39,7 @@
 
 ###  Urban
 
- Typical shelter caused by other buildings across the street"
+Typical shelter caused by other buildings across the street
 
 
 
@@ -50,7 +50,7 @@
 
 ###  LargeLotUrban
 
- Typical shelter for urban buildings on larger lots"
+Typical shelter for urban buildings on larger lots
 
 
 
@@ -61,7 +61,7 @@
 
 ###  SmallLotUrban
 
- Typical shelter produced by buildings that are immediately adjacent."
+Typical shelter produced by buildings that are immediately adjacent.
 
 
 

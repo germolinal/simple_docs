@@ -1,31 +1,31 @@
 # HVAC
 
- A collection of elements heating and cooling systems"
-"
- ## Example `.spl`"
-"
- ```rs"
- {{ #include ../../../model/tests/scanner/hvac_electric_heater.spl }}"
-"
- ```"
-"
- ## Example `.json`"
-"
- ```rs"
- {{ #include ../../../model/tests//scanner/hvac_electric_heater.json }}"
-"
- ```"
-"
+A collection of elements heating and cooling systems
+
+## Example `.spl`
+
+```rs
+{{ #include ../../../model/tests/scanner/hvac_electric_heater.spl }}
+
+```
+
+## Example `.json`
+
+```rs
+{{ #include ../../../model/tests//scanner/hvac_electric_heater.json }}
+
+```
+
 
 
  ## Supported Types
 
-* **IdealHeaterCooler**:  An ideal heating/cooling device."
- Heats and Cools with an efficiency of"
- 1, and nothing effects its COP or efficiency    "
+* **IdealHeaterCooler**: An ideal heating/cooling device.
+Heats and Cools with an efficiency of
+1, and nothing effects its COP or efficiency    
 
-* **ElectricHeater**:  An electric heater, it can only"
- heat."
+* **ElectricHeater**: An electric heater, it can only
+heat.
 
 
 
