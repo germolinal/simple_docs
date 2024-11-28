@@ -1,9 +1,9 @@
 # Building
 
-This object has two purposes. First, it can be utilized to group 
+This object has two purposes. First, it can be utilized to group
 `Space` objects together for metering. Also, there are some
-physical aspects of the the building that can be calculated from 
-some parameters of the building. For example, the `Infiltrations` 
+physical aspects of the the building that can be calculated from
+some parameters of the building. For example, the `Infiltrations`
 can be estimated from the number of storeys
 and the `ShelterClass` (check docs for those).
  

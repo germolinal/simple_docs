@@ -4,14 +4,14 @@ A collection of elements heating and cooling systems
 
 ## Example `.spl`
 
-```rs
+```json
 {{ #include ../../../model/tests/scanner/hvac_electric_heater.spl }}
 
 ```
 
 ## Example `.json`
 
-```rs
+```json
 {{ #include ../../../model/tests//scanner/hvac_electric_heater.json }}
 
 ```
