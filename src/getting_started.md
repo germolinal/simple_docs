@@ -53,7 +53,15 @@ Here’s a sample basic model written in `.spl` syntax:
 
 
 ```rs
-// This is a comment
+// This is a single line comment
+/*
+Comments can have multiple lines
+So you can explain thigs better:
+
+1. By adding lists
+2. And longer comments.
+
+*/
 
 // This describes the environment of the model
 SiteDetails {
@@ -82,4 +90,4 @@ Output {
 }
 ```
 
-Check out the Input/Output reference for a full list of possible output options.
+Check out the [Output](https://germolinal.github.io/simple_docs/ioreference/book/auto-output.html) section for a full list of possible output options.
