@@ -118,15 +118,15 @@ let my_surface = surface(int);
 
 The following properties are available for simulating control algorithms
 
-| Property | Getter | Setter |
-|----------|--------|--------|
-| `front_temperature` | Yes   | Research mode |
-| `back_temperature` | Yes   | Research mode |
-| `front_convection_coefficient` | Yes   | Research mode |
-| `back_convection_coefficient` | Yes   | Research mode |
-| `front_convective_heat_flow` | Yes   | Research mode |
-| `back_convective_heat_flow` | Yes   | Research mode |
-| `front_incident_solar_irradiance` | Yes   | Research mode |
-| `back_incident_solar_irradiance` | Yes   | Research mode |
-| `front_ir_irradiance` | Yes   | Research mode |
-| `back_ir_irradiance` | Yes   | Research mode |
+| Property |
+|----------|
+| `front_temperature` |  
+| `back_temperature` |  
+| `front_convection_coefficient` |  
+| `back_convection_coefficient` |  
+| `front_convective_heat_flow` |  
+| `back_convective_heat_flow` |  
+| `front_incident_solar_irradiance` |  
+| `back_incident_solar_irradiance` |  
+| `front_ir_irradiance` |  
+| `back_ir_irradiance` |  
