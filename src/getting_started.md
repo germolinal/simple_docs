@@ -1,6 +1,6 @@
 # Getting Started with `SIMPLE`
 
-`SIMPLE` is an incredible tool that performs Building Performance Simulations efficiently. While it requires occasion interactions with the terminal and code, we have made this guide very simple for beginners. Throughout, you will learn how the tool works, how to prepare input files and analyze outputs.
+`SIMPLE` requires occasion interactions with the terminal and code, so we have made this guide very simple for beginners. Throughout, you will learn how the tool works, how to prepare input files and analyze outputs.
 
 ## Running a `SIMPLE` Simulation
 

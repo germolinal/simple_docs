@@ -231,11 +231,18 @@ for real people.</p>
 Thermal from the Daylight from the Acoustic domains</strong>. This means that,
 if we want to trully incorporate people's behaviour and comfort into our simulations, we need to account
 for multiple domains at the same time, <strong>at run time</strong>.</p>
+<p>So far, <code>SIMPLE</code> is actually quite good at Lighting and Thermal simulation, even though not all the juice has
+been extracted from it. For instance, the following images are evidence of how good it can calculate lighting
+and how well it compares to <a href="https://energyplus.net">Energy Plus</a> in thermal calculations.</p>
+<div class="table-wrapper"><table><thead><tr><th>Lighting image</th><th>Comparison between <code>SIMPLE</code> and Energy Plus</th></tr></thead><tbody>
+<tr><td><img src="images/cornell_glass.png" alt="Cornell" /></td><td><img src="images/SIMPLEvsEPlus.png" alt="SIMPLE vs Energy Plus" /></td></tr>
+</tbody></table>
+</div>
 <blockquote>
 <p><strong>At run time means</strong> that it is not enough to run three simulations (one for thermal, one for acoustic, one for
-lighting)  without considering the interaction between these domains.</p>
+lighting) without considering the interaction between these domains.</p>
 </blockquote>
-<p><code>SIMPLE</code> was designed to allow for this. In order to achieve this, we developed an architecture where different modules would connect to a single—domain agnostic—api. This API is the <code>SIMPLE Model</code>, and it allows any developer to say <em>"Hey, give me the temperature of this room"</em> without knowing <em>how</em> this value was calculated. In a similar manner, it allows these developers to make available values for other modules to use.</p>
+<p>In order to allow for holistic simulations, we developed an architecture where different modules would connect to a single—domain agnostic—api. This API is the <code>SIMPLE Model</code>, and it allows any developer to say <em>"Hey, give me the temperature of this room"</em> without knowing <em>how</em> this value was calculated. In a similar manner, it allows these developers to make available values for other modules to use.</p>
 <p><img src="./images/holistic_architecture.png" alt="SIMPLE&#39;s architecture" /></p>
 <h3 id="2-it-was-designed-to-give-some-room-for-peoples-lives"><a class="header" href="#2-it-was-designed-to-give-some-room-for-peoples-lives">2. It was designed to give some room for people's lives</a></h3>
 <p>People are not simple. They do not just say <em>"it is cold, I will turn the heater on"</em>
@@ -252,49 +259,67 @@ not to do this at all. This is also not trivial to implement, as it means that p
 <ol>
 <li>gathering a bunch of potential actions to take</li>
 <li>mentally implementing that change and simulating some time into the future</li>
-<li>identify the best decision to take, if any.</li>
+<li>identify the best decision to take, if anygit.</li>
 </ol>
 <p><img src="./images/time_traveling.png" alt="Time traveling" /></p>
 <p>The way <code>SIMPLE</code> deal with this is by separating the <code>Simulation State</code> (i.e., the values that are part of state of the simulation and <em>NOT</em> temporary) from the model. From a software perspective, the structure representing the model is <em>immutable</em>, and thererfore the simulation process implies changing a <em>mutable</em> element we call the state.</p>
 <p>This makes it much easier and computationally cheaper to, <strong>during a simulation</strong>, copy, simulate, and decide which is the best option to take.</p>
-<h2 id="beyond-people"><a class="header" href="#beyond-people">Beyond people</a></h2>
-<p>First, it is important to acknowledge the benefits of the features outlined above, even if you do not agree with my views on comfort:</p>
+<h2 id="the-benefits-of-a-modern-tool-going-beyond-people"><a class="header" href="#the-benefits-of-a-modern-tool-going-beyond-people">The benefits of a modern tool: Going beyond people</a></h2>
+<p>Having a modern simulation tool offers several benefits. However, it is important to also acknowledge the
+general benefits that come built-in from designing a tool that helps design buildings for people:</p>
 <ol>
-<li><strong>Holistic simulations</strong> lets us optimize
-multi-domain control algorithms that might lead to more optimal performance of buildings.</li>
-<li><strong>Traveling in time</strong> allows us to implement Model Predictive Control, at runtime, in production, as part of a real EMS system.</li>
+<li><strong>Holistic simulations</strong> let us optimize multi-domain control algorithms that might lead to more
+optimal performance of buildings.</li>
+<li><strong>Traveling in time</strong> allows us to implement Model Predictive Control, at runtime, in production,
+as part of a real EMS system.</li>
 </ol>
-<p>But there are also other benefits.</p>
-<h3 id="it-allows-for-more-complex-control-algorithms"><a class="header" href="#it-allows-for-more-complex-control-algorithms">It allows for more complex control algorithms</a></h3>
-<p><code>SIMPLE</code> allows writing control algorithms as scripts. This allows for a much richer and flexible way of writing algoritghms than through schedules. or other common methodss.</p>
+<p>And, of course, there are other benefits.</p>
+<h3 id="1-it-allows-easily-defining-complex-control-algorithms"><a class="header" href="#1-it-allows-easily-defining-complex-control-algorithms">1. It allows easily defining complex control algorithms</a></h3>
+<p><code>SIMPLE</code> allows writing control algorithms as scripts. This allows for a much richer and flexible
+way of writing algoritghms than through schedules. or other common methods.</p>
 <pre><code class="language-rs">let kids_bedroom = space("Kids Bedroom");
 let kids_heater = hvac("Kids heater");
+let kids_window = fenestration("kids window");
 
+let window_is_open = kids_window.open_fraction &gt; 0.0
 let temperature = kids_bedroom.dry_bulb_temperature;
+let is_cold = temperature &lt; 19
+let is_hot = temperature &gt; 25
 
-if temperature &lt; 18 {
-    kids_heater.power_consumption = 1000
-} else if temperature &gt; 23 {
-    if rand() &gt; 0.82 {        
-        kids_heater.power_consumption = 0
+let outside_temperature = kids_window.front_temperature
+
+if is_cold {
+    if outside_temperature &lt; inside_temperature  {
+        if random() &lt; 0.7 {
+            // 70% chance of opening windows
+            kids_window.open_fraction = 1
+        }
+    } else if outside_temperature &gt; inside_temperature {
+        if random() &lt; 0.3 {
+            // 30% chance of ventilating
+            kids_window.open_fraction = 1
+        }
     } else {
-        print("Oh oh! I forgot to turn the heater off!")
+        if random() &lt; 0.5{
+            // 50% of opening windows to balance temperatures
+            kids_window.open_fraction = 1
+        }
     }
 }
 
+// Do something with heaters.
 
 </code></pre>
-<h3 id="programs-no-longer-just-run-on-your-pc"><a class="header" href="#programs-no-longer-just-run-on-your-pc">Programs no longer just run on your PC</a></h3>
+<h3 id="2-programs-no-longer-just-run-on-your-pc"><a class="header" href="#2-programs-no-longer-just-run-on-your-pc">2. Programs no longer just run on your PC</a></h3>
 <p><code>SIMPLE</code> is a modern tool, written in a modern language, and that can run in
 multiple environments.</p>
-<p>It can be easily compiled for Windows, Mac and Linux for running locally in your
-computer. It can also be compiled into Web Assembly, which means that it can <a href="http://buildingsforpeople.org/simple_demo/">run
-on a browser</a> without the need for
-servers. It can also be deployed in <a href="https://github.com/GoogleContainerTools/distroless">very small and secure containers</a>
-for running at scale on the cloud. It can probably (I have not tested this) be
-compiled into a small computer and be implemented as an Energy Management System in
-an actual building, providing insights on what the best strategy is.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="cant-we-just-improve-other-tools"><a class="header" href="#cant-we-just-improve-other-tools">Can't we just improve other tools?</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Environment</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>Run locally</strong></td><td>Being a pure <code>RUST</code> program, can be compiled to run on Windows, Linux and MacOS (has been tested on Linux and Mc).</td></tr>
+<tr><td><strong>Web Assembly</strong></td><td>Run it on a browser, without the need for servers. <a href="http://buildingsforpeople.org/simple_demo/">CHECK THIS EXAMPLE</a></td></tr>
+<tr><td><strong>On the cloud</strong></td><td>Embed <code>SIMPLE</code> into a web server and release it into <a href="https://github.com/GoogleContainerTools/distroless">very small and secure containers</a></td></tr>
+<tr><td><strong>On location</strong></td><td>(<em>not tested</em>) Compile <code>SIMPLE</code> in a Raspberry PI or similar machine, and put it to work as part of the EMS</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="cant-we-just-improve-other-tools"><a class="header" href="#cant-we-just-improve-other-tools">Can't we just improve other tools?</a></h1>
 <p>I have been working in Building Simulation Tool space for nearly a decade now. During
 this time, I have tried to combine simulation tools and methods, and also to make
 simulation more accessible to people. For example, my MSc research focused on the
@@ -328,7 +353,7 @@ behind currently existing Building Performance Simulation tools… what it propo
 build a good-old wheel with new materials and methods, in a more modern factory, and that
 is designed to travel in modern roads.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started-with-simple"><a class="header" href="#getting-started-with-simple">Getting Started with <code>SIMPLE</code></a></h1>
-<p><code>SIMPLE</code> is an incredible tool that performs Building Performance Simulations efficiently. While it requires occasion interactions with the terminal and code, we have made this guide very simple for beginners. Throughout, you will learn how the tool works, how to prepare input files and analyze outputs.</p>
+<p><code>SIMPLE</code> requires occasion interactions with the terminal and code, so we have made this guide very simple for beginners. Throughout, you will learn how the tool works, how to prepare input files and analyze outputs.</p>
 <h2 id="running-a-simple-simulation"><a class="header" href="#running-a-simple-simulation">Running a <code>SIMPLE</code> Simulation</a></h2>
 <p><code>SIMPLE</code> is a command-line based tool, therefore, it doesn't have a user interface (UI). Here’s a short crash course on how the terminal works:</p>
 <p>The terminal is an interface that allows you to access the command line. The command line is a text-based interface within the operating system to control the software.</p>
