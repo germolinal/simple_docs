@@ -199,25 +199,36 @@ and Buildings</li>
 <li><strong>Input/Output Reference guide</strong>: This is an automatically generated guide, is updated every time the source code of <code>SIMPLE</code>'s input model is updated. This section is meant to be a reference guide, helping</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-simple"><a class="header" href="#what-is-simple">What is <code>SIMPLE</code>?</a></h1>
-<p>I think <code>SIMPLE</code> can be seen from two perspectives. One of them is <strong>historical</strong>, and refers
-to the motivations and drivers that determined its design and motivated me to develop it. And the other one is
-<strong>pragmatic</strong>, refering to those cool features and benefits of <code>SIMPLE</code> that I have been finding <em>during</em> it's
-development. (Arguibly, these pragmatic benefits might be present in any modern simulation tool... but considering
-the low number of these, I guess they are pretty unique to <code>SIMPLE</code> anyway.)</p>
-<h2 id="simples-historical-origins-its-the-people-stupid"><a class="header" href="#simples-historical-origins-its-the-people-stupid"><code>SIMPLE</code>'s historical origins: It's the people, stupid</a></h2>
-<p>The development of <code>SIMPLE</code> was motivated by the results of my <a href="https://openaccess.wgtn.ac.nz/articles/thesis/Exploring_modelling_and_simulating_the_Feeling_of_Comfort_in_residential_settings/17085467/1">PhD Research</a>.
-In these studies, I investigated what is it that people—not building scientists
-or architects or engineers—mean by and expect from <em>a comfortable home</em>. My finidings
-revealed to me how imbalanced our knowledge is, and how this disparity will continue to grow in the future
-if we do not dedicate more time to humans. Let me put it as follows:</p>
+<p>First and foremost, <code>SIMPLE</code> is a building berformance simulation tool that aims to satisfy
+the present needs of this industry.</p>
+<p>Digging deeper, <code>SIMPLE</code> can be seen from two perspectives.</p>
 <ol>
-<li><strong>Materials have been/will be getting better</strong>: e.g., Whether a window is open or closed makes a big different
-to the building's performance, and the health and comfort of the people in it.</li>
-<li><strong>Software have been/will be getting better</strong>: e.g., We can predict and understand the effects of an open/closed window better than ever before</li>
-<li><strong>Our understanding of people is not catching up</strong>: e.g., do we <em>really</em> know whether the window open or closed?</li>
+<li><strong>Historical</strong> perspective, referring to the motivations and drivers that determined
+its design and motivated me to develop it.</li>
+<li><strong>Pragmatic</strong> perspective, associated with those cool features and benefits of <code>SIMPLE</code>
+that I have been finding <em>during</em> it's development.</li>
 </ol>
 <blockquote>
-<p><strong>PLEASE Note</strong>: Point 3 is not meant to say that nothing has been done about understanding people. However,
+<p>Arguibly, these <em>pragmatic</em> benefits might be present in any modern simulation tool... but considering
+the low number of these, I guess they are pretty unique to <code>SIMPLE</code> anyway.</p>
+</blockquote>
+<h2 id="simples-origins--its-the-people-stupid"><a class="header" href="#simples-origins--its-the-people-stupid"><code>SIMPLE</code>'s origins — It's the people, stupid</a></h2>
+<p>The development of <code>SIMPLE</code> was motivated by the results of my <a href="https://openaccess.wgtn.ac.nz/articles/thesis/Exploring_modelling_and_simulating_the_Feeling_of_Comfort_in_residential_settings/17085467/1">PhD Research</a>.
+In these studies, I investigated what is it that <em>people</em>—not building scientists
+or architects or engineers—mean by and expect from <em>a comfortable home</em>. In a single sentence, my finidings
+suggest that our understanding of building physics far outpaces our knowledge of how people
+interact with buildings. This gap is only going to widen unless we invest resources in understanding
+humans.</p>
+<p>Let put it this way:</p>
+<ol>
+<li><strong>Materials have been/will be getting better</strong> which means that, for instance, closed doors and windows are really good at
+preventing air leakage and heat transfer. Therefore, building controls and human behaviour greatly implact
+the building's performance, and the health and comfort of the people in it.</li>
+<li><strong>Software have been/will be getting better</strong>, meaning that we can—for instance—predict and understand the effects of an open/closed window better than ever before</li>
+<li><strong>Our understanding of people is not catching up</strong>, meaning that ww are not certain of whether windows and doors are open or not.</li>
+</ol>
+<blockquote>
+<p><strong>Note that</strong> point 3 is not suggesting that nothing has been done about understanding people. However,
 I would argue that our current tools to study people are not the best. This should be more clear later in this section.</p>
 </blockquote>
 <p>This is a problem because buildings are built for people. Therefore, not understanding people implies not understanding the performance of buildings. Understanding <em>when</em> and <em>why</em> people choose to open
@@ -231,17 +242,17 @@ for real people.</p>
 Thermal from the Daylight from the Acoustic domains</strong>. This means that,
 if we want to trully incorporate people's behaviour and comfort into our simulations, we need to account
 for multiple domains at the same time, <strong>at run time</strong>.</p>
-<p>So far, <code>SIMPLE</code> is actually quite good at Lighting and Thermal simulation, even though not all the juice has
-been extracted from it. For instance, the following images are evidence of how good it can calculate lighting
-and how well it compares to <a href="https://energyplus.net">Energy Plus</a> in thermal calculations.</p>
-<div class="table-wrapper"><table><thead><tr><th>Lighting image</th><th>Comparison between <code>SIMPLE</code> and Energy Plus</th></tr></thead><tbody>
-<tr><td><img src="images/cornell_glass.png" alt="Cornell" /></td><td><img src="images/SIMPLEvsEPlus.png" alt="SIMPLE vs Energy Plus" /></td></tr>
-</tbody></table>
-</div>
 <blockquote>
 <p><strong>At run time means</strong> that it is not enough to run three simulations (one for thermal, one for acoustic, one for
 lighting) without considering the interaction between these domains.</p>
 </blockquote>
+<p>So far, <code>SIMPLE</code> is actually quite good at Lighting and Thermal simulation, even though this feature has not been
+fully utilised. For instance, the following figure is evidence of how good it can calculate lighting
+and how well it compares to <a href="https://energyplus.net">Energy Plus</a> in therms of temperature estimations.</p>
+<div class="table-wrapper"><table><thead><tr><th>Lighting simulation</th><th>Thermal simulation</th></tr></thead><tbody>
+<tr><td><img src="images/cornell_glass.png" alt="Cornell" /></td><td><img src="images/SIMPLEvsEPlus.png" alt="SIMPLE vs Energy Plus" /></td></tr>
+</tbody></table>
+</div>
 <p>In order to allow for holistic simulations, we developed an architecture where different modules would connect to a single—domain agnostic—api. This API is the <code>SIMPLE Model</code>, and it allows any developer to say <em>"Hey, give me the temperature of this room"</em> without knowing <em>how</em> this value was calculated. In a similar manner, it allows these developers to make available values for other modules to use.</p>
 <p><img src="./images/holistic_architecture.png" alt="SIMPLE&#39;s architecture" /></p>
 <h3 id="2-it-was-designed-to-give-some-room-for-peoples-lives"><a class="header" href="#2-it-was-designed-to-give-some-room-for-peoples-lives">2. It was designed to give some room for people's lives</a></h3>
@@ -250,21 +261,31 @@ in a deterministic manner. They take into account things like budget, bills, whe
 they are alone, and whether they have kids. Modelling this kind of
 behaviour calls for a much more flexible way of modelling control algorithms (yes, I am
 treating human behaviour as a control algorithm).</p>
-<p>This is actually addressed in the same way as point 1 (i.e., Holistic simulations), in the sense that a new module could be created to deal with "Budget" or "Safety" and then use the same API to read and write values.</p>
+<p>This is actually addressed in the same way as point 1 (i.e., Holistic simulations), in
+the sense that a new module could be created to deal with "Budget" or "Safety" and then
+use the same API to read and write values.</p>
 <h3 id="3-it-was-designed-to-travel-in-time"><a class="header" href="#3-it-was-designed-to-travel-in-time">3. It was designed to travel in time</a></h3>
 <p><code>SIMPLE</code> was designed with the purpose of acknowledging that <strong>people are constantly aware of their future</strong>.
 This is kind of obvious (e.g., you put a jacket <em>before</em> going out, not after) but our simulation tools tend
-not to do this at all. This is also not trivial to implement, as it means that people—every time they need to decide what to do—consider the near future that is comming.</p>
+to make it hard to implement this feature.</p>
+<p>Allowing the simulation to travel in time is not trivial, as it means that—at every time step of the simulation—we
+need to estimate what will happen in the future and then return to the present.</p>
 <p>From a simulation perspective, this implies</p>
 <ol>
-<li>gathering a bunch of potential actions to take</li>
-<li>mentally implementing that change and simulating some time into the future</li>
-<li>identify the best decision to take, if anygit.</li>
+<li>Gathering a bunch of potential actions to take</li>
+<li>Execute each action, simulating some time into the future, record the results, and erase</li>
+<li>From the results of all actions, identify the best decision to take, if any.</li>
 </ol>
 <p><img src="./images/time_traveling.png" alt="Time traveling" /></p>
-<p>The way <code>SIMPLE</code> deal with this is by separating the <code>Simulation State</code> (i.e., the values that are part of state of the simulation and <em>NOT</em> temporary) from the model. From a software perspective, the structure representing the model is <em>immutable</em>, and thererfore the simulation process implies changing a <em>mutable</em> element we call the state.</p>
-<p>This makes it much easier and computationally cheaper to, <strong>during a simulation</strong>, copy, simulate, and decide which is the best option to take.</p>
-<h2 id="the-benefits-of-a-modern-tool-going-beyond-people"><a class="header" href="#the-benefits-of-a-modern-tool-going-beyond-people">The benefits of a modern tool: Going beyond people</a></h2>
+<p><code>SIMPLE</code> deals with this challenge by separating the <code>Simulation State</code> (i.e., the values that
+describe the physical state of the building and therefore change during the simulation) from the model (i.e., which
+is constant throughout the simulation). From a software perspective, the structure representing
+the model is <em>immutable</em> while the state is <em>mutable</em>.</p>
+<p>The whole point of this architecture is that the <code>Simulation State</code> happens to be
+a relatively small and cheap-to-copy structure (it is an array of floating point numbers).
+This implies that <strong>during a simulation</strong>, we can create copy, then simulate, and then
+destroy this copy without much loss of performance.</p>
+<h2 id="beyond-people--benefits-of-a-modern-tool"><a class="header" href="#beyond-people--benefits-of-a-modern-tool">Beyond people — benefits of a modern tool</a></h2>
 <p>Having a modern simulation tool offers several benefits. However, it is important to also acknowledge the
 general benefits that come built-in from designing a tool that helps design buildings for people:</p>
 <ol>
@@ -275,7 +296,7 @@ as part of a real EMS system.</li>
 </ol>
 <p>And, of course, there are other benefits.</p>
 <h3 id="1-it-allows-easily-defining-complex-control-algorithms"><a class="header" href="#1-it-allows-easily-defining-complex-control-algorithms">1. It allows easily defining complex control algorithms</a></h3>
-<p><code>SIMPLE</code> allows writing control algorithms as scripts. This allows for a much richer and flexible
+<p><code>SIMPLE</code> can ingest control algorithms as scripts. This allows for a much richer and flexible
 way of writing algoritghms than through schedules. or other common methods.</p>
 <pre><code class="language-rs">let kids_bedroom = space("Kids Bedroom");
 let kids_heater = hvac("Kids heater");
@@ -288,29 +309,65 @@ let is_hot = temperature &gt; 25
 
 let outside_temperature = kids_window.front_temperature
 
-if is_cold {
-    if outside_temperature &lt; inside_temperature  {
-        if random() &lt; 0.7 {
-            // 70% chance of opening windows
-            kids_window.open_fraction = 1
-        }
-    } else if outside_temperature &gt; inside_temperature {
-        if random() &lt; 0.3 {
-            // 30% chance of ventilating
-            kids_window.open_fraction = 1
-        }
-    } else {
-        if random() &lt; 0.5{
-            // 50% of opening windows to balance temperatures
-            kids_window.open_fraction = 1
-        }
+if is_hot &amp;&amp; outside_temperature &lt; inside_temperature  {
+    if random() &lt; 0.7 {
+        // 70% chance of opening windows
+        kids_window.open_fraction = 1
+    }
+} else if is_cold &amp;&amp; outside_temperature &gt; inside_temperature {
+    if random() &lt; 0.3 {
+        // 30% chance of ventilating
+        kids_window.open_fraction = 1
+    }
+} else {
+    if random() &lt; 0.5{
+        // 50% of opening windows to balance temperatures
+        kids_window.open_fraction = 1
     }
 }
 
-// Do something with heaters.
+
+// Do something else...
 
 </code></pre>
-<h3 id="2-programs-no-longer-just-run-on-your-pc"><a class="header" href="#2-programs-no-longer-just-run-on-your-pc">2. Programs no longer just run on your PC</a></h3>
+<h3 id="2-you-can-store-and-reuse-the-solar-calculations"><a class="header" href="#2-you-can-store-and-reuse-the-solar-calculations">2. You can store and reuse the solar calculations</a></h3>
+<p>Optical calculations—like those required for estimating the amount of sun or light that reaches each
+surface—can be computationally expensive. Because of this, it is common to pre-calculate as much
+as possible <em>before</em> the simulation starts, and then reuse this data when advancing through time.</p>
+<p><code>SIMPLE</code> goes one step ahead and allows you to save this data, and then reuse it in succeding
+simulations. (This data is valid as long as the geometry and materials of the model remain the same.)</p>
+<pre><code class="language-rs">SolarOptions {
+    optical_data_path: "./path/to/solar/data.json",
+    // ... other options
+}
+</code></pre>
+<p>Some applications of this are the following:</p>
+<ol>
+<li>We had <code>SIMPLE</code> deployed on the cloud, and used it to run simulations on-demand. Keeping the solar
+data on a database meant that we did not have to recalculate it, significantly reducing response time
+and computational expenses.</li>
+<li>Optimising non-geometric elements (e.g., insulation thickness, size of heaters, luminaire placements, etc.)
+does not imply changes in geometry. This means that every step of the optimisation will be shorter.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> A very common example of this technique is the Daylight Coefficients, which is the technique that
+<code>SIMPLE</code> utilises to calculate the amount of solar radiation reaching each surface. The figure
+below shows how <code>SIMPLE</code>'s results compare to those of EnergyPlus, which uses a completely different
+technique.
+<img src="./images/incident_solar.png" alt="Solar Radiation" /></p>
+</blockquote>
+<h3 id="3-you-can-save-the-current-state-of-the-simulation"><a class="header" href="#3-you-can-save-the-current-state-of-the-simulation">3. You can save the current state of the simulation</a></h3>
+<blockquote>
+<p><em>This is possible, but not yet implemented</em></p>
+</blockquote>
+<p>Given that the <code>Simulation State</code> is a relatively small, independent object,
+it can be conveniently stored in a database or text file. This enables the
+pausing and restarting of simulations, offering flexibility for various applications.</p>
+<p>This feature can potentially be particularly beneficial for integrating <code>SIMPLE</code> with
+Energy Management Systems (EMS). By periodically running simulations,
+EMS systems can update the building's current state and determine the most o
+ptimal control strategy, such as Model Predictive Control.</p>
+<h3 id="4-deploy-it-to-modern-infrastructure"><a class="header" href="#4-deploy-it-to-modern-infrastructure">4. Deploy it to modern infrastructure</a></h3>
 <p><code>SIMPLE</code> is a modern tool, written in a modern language, and that can run in
 multiple environments.</p>
 <div class="table-wrapper"><table><thead><tr><th>Environment</th><th>Example</th></tr></thead><tbody>
