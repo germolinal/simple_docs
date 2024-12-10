@@ -1,6 +1,6 @@
 # What is `SIMPLE`?
 
-First and foremost, `SIMPLE` is a building berformance simulation tool that aims to satisfy 
+First and foremost, `SIMPLE` is a building performance simulation tool that aims to satisfy 
 the present needs of this industry.
 
 Digging deeper, `SIMPLE` can be seen from two perspectives. 
@@ -25,10 +25,10 @@ humans.
 Let put it this way:
 
 1. **Materials have been/will be getting better** which means that, for instance, closed doors and windows are really good at 
-preventing air leakage and heat transfer. Therefore, building controls and human behaviour greatly implact
-the building's performance, and the health and comfort of the people in it.
+preventing air leakage and heat transfer. Therefore, building controls and human behaviour—which define whether a window or 
+door is open or closed—greatly impact the building's performance, and the health and comfort of the people in it.
 2. **Software have been/will be getting better**, meaning that we can—for instance—predict and understand the effects of an open/closed window better than ever before
-3. **Our understanding of people is not catching up**, meaning that ww are not certain of whether windows and doors are open or not.
+3. **Our understanding of people is not catching up**, meaning that we are not certain of whether windows and doors are open or not.
 
 > **Note that** point 3 is not suggesting that nothing has been done about understanding people. However,
 > I would argue that our current tools to study people are not the best. This should be more clear later in this section.
@@ -91,7 +91,7 @@ need to estimate what will happen in the future and then return to the present.
 From a simulation perspective, this implies
 
 1. Gathering a bunch of potential actions to take
-2. Execute each action, simulating some time into the future, record the results, and erase
+2. Execute each action, simulating some time into the future, record the results, and undo the changes.
 3. From the results of all actions, identify the best decision to take, if any.
 
 ![Time traveling](./images/time_traveling.png)
@@ -114,7 +114,7 @@ general benefits that come built-in from designing a tool that helps design buil
 
 1. **Holistic simulations** let us optimize multi-domain control algorithms that might lead to more
    optimal performance of buildings.
-2. **Traveling in time** allows us to implement Model Predictive Control, at runtime, in production,
+2. **Traveling in time** gives us the chance to implement Model Predictive Control, at runtime, in production,
    as part of a real EMS system.
 
 And, of course, there are other benefits.
@@ -183,10 +183,10 @@ and computational expenses.
 2. Optimising non-geometric elements (e.g., insulation thickness, size of heaters, luminaire placements, etc.)
 does not imply changes in geometry. This means that every step of the optimisation will be shorter.
 
-> **Note:** A very common example of this technique is the Daylight Coefficients, which is the technique that 
+> **Note:** A very common example of this technique is the Daylight Coefficients, which is the method that 
 `SIMPLE` utilises to calculate the amount of solar radiation reaching each surface. The figure
-below shows how `SIMPLE`'s results compare to those of EnergyPlus, which uses a completely different
-technique.
+below shows how `SIMPLE`'s results compare to those of EnergyPlus, which performs this calculation in
+a very different manner.
 > ![Solar Radiation](./images/incident_solar.png)
 
 
@@ -213,7 +213,7 @@ multiple environments.
 
 | Environment | Example | 
 | ------------|---------|
-| **Run locally** | Being a pure `RUST` program, can be compiled to run on Windows, Linux and MacOS (has been tested on Linux and Mc).|
+| **Run locally** | Being a pure `RUST` program, can be compiled to run on Windows, Linux and MacOS (has been tested on Linux and Mac).|
 | **Web Assembly** | Run it on a browser, without the need for servers. [CHECK THIS EXAMPLE](http://buildingsforpeople.org/simple_demo/) |
 | **On the cloud** | Embed `SIMPLE` into a web server and release it into [very small and secure containers](https://github.com/GoogleContainerTools/distroless) | 
 | **On location** | (_not tested_) Compile `SIMPLE` in a Raspberry PI or similar machine, and put it to work as part of the EMS | 
