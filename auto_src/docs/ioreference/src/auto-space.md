@@ -93,12 +93,12 @@ let my_space = space(int);
 
 The following properties are available for simulating control algorithms
 
-| Property | Getter | Setter |
-|----------|--------|--------|
-| `dry_bulb_temperature` | Yes   | Research mode |
-| `brightness` | Yes   | Research mode |
-| `loudness` | Yes   | Research mode |
-| `infiltration_volume` | Yes   | Research mode |
-| `infiltration_temperature` | Yes   | Research mode |
-| `ventilation_volume` | Yes   | Research mode |
-| `ventilation_temperature` | Yes   | Research mode |
+| Property |
+|----------|
+| `dry_bulb_temperature` |  
+| `brightness` |  
+| `loudness` |  
+| `infiltration_volume` |  
+| `infiltration_temperature` |  
+| `ventilation_volume` |  
+| `ventilation_temperature` |  
